@@ -85,3 +85,9 @@ Pas d'inquiétude, il suffit de recommencer les étapes uniquement __SPRING__ po
 ### Aucun résultat
 
 En cas d'aucun résultat, je vous invite à reprendre les étapes depuis le début.
+
+#Architecture provisoire
+
+Ceci est une architecture provisoire, elle risque d'évoluer au fil du temps.
+
+<img src="https://i.ibb.co/pKbDhZC/Archi.png">
