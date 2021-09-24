@@ -41,7 +41,7 @@ Vous devez vous retrouver avec ces deux dossiers :
 ```
 Si c'est le cas, alors nous sommes sur la bonne voie 🎉
 
-Nous allons commencer par le __FRONT__. Ouvrez __IntelliJ__, puis ouvrez un nouveau projet et selectionnez __FRONT__. Si toutes les installations faites un peu plus haut sont correctes, __IntelliJ__ devrait s'occuper lui même de compiler le projet. L'opération peut prendre un peu de temps en fonction de votre connexion internet. Vous pouvez suivre l'avancement de l'opération tout en bas de votre IDE.
+Nous allons commencer par l'__API__. Ouvrez __IntelliJ__, puis ouvrez un nouveau projet et selectionnez __API__. Si toutes les installations faites un peu plus haut sont correctes, __IntelliJ__ devrait s'occuper lui même de compiler le projet. L'opération peut prendre un peu de temps en fonction de votre connexion internet. Vous pouvez suivre l'avancement de l'opération tout en bas de votre IDE.
 
 Si votre IDE ne compile pas automatiquement, executez cette commande :
 
