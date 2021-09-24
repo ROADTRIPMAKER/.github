@@ -1,12 +1,87 @@
-## Hi there 👋
+# Road Trip Maker
+_Le meilleur choix, c'est forcément le votre!_
 
+![Spring](https://img.shields.io/badge/Spring-2.5.5-brightgreen?logo=Spring)
+![Angular](https://img.shields.io/badge/Angular-12.2.6-brightgreen?logo=Angular)
+![Node.js](https://img.shields.io/badge/Node.js-14.17.6-brightgreen?logo=node.js)
+![MongoDB](https://img.shields.io/badge/MongoDB-4.4.9-brightgreen?logo=Mongodb)
 
+![NPM](https://img.shields.io/badge/NPM-6.14.15-brightgreen?logo=npm)
+![JVM](https://img.shields.io/badge/JVM-16.0.2-brightgreen?logo=Java)
+![Gradle](https://img.shields.io/badge/Gradle-7.2-brightgreen?logo=Gradle)
 
-**Here are some ideas to get you started:**
+![Intellij](https://img.shields.io/badge/Intellij-Ultimate-brightgreen?logo=intellij-idea)
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://guides.github.com/features/mastering-markdown/)
+## Prémices
+Avant de commencer, il est important d'installer les outils nécessaires au bon fonctionnement du projet : 
+- [Java](https://www.oracle.com/java/technologies/downloads/#java16-linux) Nous aurons besoin de Java pour faire fonctionner Spring
+- [Gradle](https://gradle.org/install/) Nous aurons besoin de Gradle pour faire fonctionner Spring
+- [Node](https://nodejs.org/en/) Nous aurons besoin de Node en version LTS pour faire fonctionner Angular
+- [Intellij](https://www.jetbrains.com/fr-fr/idea/) Nous utiliserons pour notre API ainsi que pour le FRONT d'intellij
 
+Il existe une multitude de tutoriels sur internet pour vous aider dans l'installation des différents outils ci-dessus.
+
+## Premier lancement
+### API
+
+Suivez les instructions ci-dessous pour mettre en place l'environnement adéquat au bon lancement du projet :
+
+```sh
+mkdir roadtripmaker
+cd roadtripmaker
+git clone git@github.com:ROADTRIPMAKER/API.git
+git clone https://github.com/ROADTRIPMAKER/API.git
+```
+
+Vous devez vous retrouver avec ces deux dossiers :
+```
+📦roadtripmaker
+ ┣ 📂API
+ ┗ 📂FRONT
+```
+Si c'est le cas, alors nous sommes sur la bonne voie 🎉
+
+Nous allons commencer par le __FRONT__. Ouvrez __IntelliJ__, puis ouvrez un nouveau projet et selectionnez __FRONT__. Si toutes les installations faites un peu plus haut sont correctes, __IntelliJ__ devrait s'occuper lui même de compiler le projet. L'opération peut prendre un peu de temps en fonction de votre connexion internet. Vous pouvez suivre l'avancement de l'opération tout en bas de votre IDE.
+
+Si votre IDE ne compile pas automatiquement, executez cette commande :
+
+```sh
+cd API
+./gradlew build
+```
+Si tous les voyants sont au vert cela veut dire que nous y sommes presque ! 🔥
+Il ne reste plus qu'a cliquer sur le bouton run de votre IDEA pour qu'il puisse lancer l'API. Tout comme le build, il est possible de faire cette étape via une commande :
+
+```sh
+./gradlew bootRun
+```
+
+### FRONT
+Passons maintenant au __FRONT__. Executez les commandes suivantes :
+
+```sh
+cd FRONT
+npm install
+```
+Le processus peut prendre plus au moins du temps en fonction de votre connexion internet. Une fois que ceci est terminé, executez cette commande :
+
+```sh
+ng serve
+```
+
+Après un court instant, entrez ce lien dans votre navigateur favoris : http://localhost:4200/
+
+Si vous appercevez cette page : 
+<img src="https://i.ibb.co/RQWxXgk/spring.png">
+
+__BRAVO__, vous avez réussi toutes les étapes 👏!
+
+Si vous appercevez cette page : 
+<img src="https://i.ibb.co/9nzx493/nospring.png">
+
+__OUPS__, une erreur est survenue côté __SPRING__ 😞!
+Pas d'inquiétude, il suffit de recommencer les étapes uniquement __SPRING__ pour essayer de résoudre l'anomalie.
+
+### Aucun résultat
+
+En cas d'aucun résultat, je vous invite à reprendre les étapes depuis le début.
