@@ -43,14 +43,14 @@ Si c'est le cas, alors nous sommes sur la bonne voie 🎉
 
 Nous allons commencer par l'__API__. Ouvrez __IntelliJ__, puis ouvrez un nouveau projet et selectionnez __API__. Si toutes les installations faites un peu plus haut sont correctes, __IntelliJ__ devrait s'occuper lui même de compiler le projet. L'opération peut prendre un peu de temps en fonction de votre connexion internet. Vous pouvez suivre l'avancement de l'opération tout en bas de votre IDE.
 
-Si votre IDE ne compile pas automatiquement, executez cette commande :
+Si votre IDE ne compile pas automatiquement, éxecutez cette commande :
 
 ```sh
 cd API
 ./gradlew build
 ```
 Si tous les voyants sont au vert cela veut dire que nous y sommes presque ! 🔥
-Il ne reste plus qu'a cliquer sur le bouton run de votre IDEA pour qu'il puisse lancer l'API. Tout comme le build, il est possible de faire cette étape via une commande :
+Il ne reste plus qu'à cliquer sur le bouton run de votre IDE pour qu'il puisse lancer l'API. Tout comme le build, il est possible de faire cette étape via une commande :
 
 ```sh
 ./gradlew bootRun
@@ -63,20 +63,20 @@ Passons maintenant au __FRONT__. Executez les commandes suivantes :
 cd FRONT
 npm install
 ```
-Le processus peut prendre plus au moins du temps en fonction de votre connexion internet. Une fois que ceci est terminé, executez cette commande :
+Le processus peut prendre plus au moins du temps en fonction de votre connexion internet. Une fois que ceci est terminé, éxecutez cette commande :
 
 ```sh
 ng serve
 ```
 
-Après un court instant, entrez ce lien dans votre navigateur favoris : http://localhost:4200/
+Après un court instant, entrez ce lien dans votre navigateur favori : http://localhost:4200/
 
-Si vous appercevez cette page : 
+Si vous apercevez cette page : 
 <img src="https://i.ibb.co/RQWxXgk/spring.png">
 
 __BRAVO__, vous avez réussi toutes les étapes 👏!
 
-Si vous appercevez cette page : 
+Si vous apercevez cette page : 
 <img src="https://i.ibb.co/9nzx493/nospring.png">
 
 __OUPS__, une erreur est survenue côté __SPRING__ 😞!
