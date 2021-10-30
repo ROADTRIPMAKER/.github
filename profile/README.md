@@ -91,3 +91,23 @@ En cas d'aucun résultat, je vous invite à reprendre les étapes depuis le déb
 Ceci est une architecture provisoire, elle risque d'évoluer au fil du temps.
 
 <img src="https://i.ibb.co/pKbDhZC/Archi.png">
+
+# Itération 0.2
+
+Scrum board : Je vous ai transmis une invitation sur votre mail lhillah@parisnanterre.fr afin de vous donner les accès nécessaires à nos différents sprints sur Jira.
+
+### Diagramme de déploiement
+
+<img src="https://i.ibb.co/NCjRFRt/screen.png">
+
+### Architecture provisoire
+<img src="https://i.ibb.co/jyr1QGF/download.png">
+
+### Features développées
+Comme indiqué pendant notre présentation, nous avons mal priorisé nos features métier. A ce stade, nos features sont en cours de développement et sont disponibles uniquement sur des branches (pas encore de pull request).
+ - Nous avons pour l'instant le Sign in / Sign up qui sont en cours de tests avant de pull request.
+ - La home page côté front est prête et une pull request a été ouvert
+ - Le feed est en cours de développement
+ - La map est en mode sandbox sur une branche
+
+Nous aurons des features à vous présenter pour notre prochain sprint, celui-ci a été notre sprint 0 où nous avons détecté les défauts de notre organisation et nous allons y remédier pour le prochain.
