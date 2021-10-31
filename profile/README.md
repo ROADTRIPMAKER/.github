@@ -41,7 +41,7 @@ Vous devez vous retrouver avec ces deux dossiers :
 ```
 Si c'est le cas, alors nous sommes sur la bonne voie 🎉
 
-Nous allons commencer par l'__API__. Ouvrez __IntelliJ__, puis ouvrez un nouveau projet et selectionnez __API__. Si toutes les installations faites un peu plus haut sont correctes, __IntelliJ__ devrait s'occuper lui même de compiler le projet. L'opération peut prendre un peu de temps en fonction de votre connexion internet. Vous pouvez suivre l'avancement de l'opération tout en bas de votre IDE.
+Nous allons commencer par l'__API__. Ouvrez __IntelliJ__, puis ouvrez un nouveau projet et sélectionnez __API__. Si toutes les installations faites un peu plus haut sont correctes, __IntelliJ__ devrait s'occuper lui même de compiler le projet. L'opération peut prendre un peu de temps en fonction de votre connexion internet. Vous pouvez suivre l'avancement de l'opération tout en bas de votre IDE.
 
 Si votre IDE ne compile pas automatiquement, éxecutez cette commande :
 
@@ -57,13 +57,13 @@ Il ne reste plus qu'à cliquer sur le bouton run de votre IDE pour qu'il puisse 
 ```
 
 ### FRONT
-Passons maintenant au __FRONT__. Executez les commandes suivantes :
+Passons maintenant au __FRONT__. Exécutez les commandes suivantes :
 
 ```sh
 cd FRONT
 npm install
 ```
-Le processus peut prendre plus au moins du temps en fonction de votre connexion internet. Une fois que ceci est terminé, éxecutez cette commande :
+Le processus peut prendre plus au moins du temps en fonction de votre connexion internet. Une fois que ceci est terminé, exécutez cette commande :
 
 ```sh
 ng serve
@@ -94,7 +94,7 @@ Ceci est une architecture provisoire, elle risque d'évoluer au fil du temps.
 
 # Itération 0.2
 
-Scrum board : Je vous ai transmis une invitation sur votre mail lhillah@parisnanterre.fr afin de vous donner les accès nécessaires à nos différents sprints sur Jira.
+Scrum board :Veuillez trouver sur votre boite mail lhillah@parisnanterre.fr, une invitation vous donnant les accès nécessaires à nos différents sprints sur Jira.
 
 ### Diagramme de déploiement
 
@@ -104,10 +104,10 @@ Scrum board : Je vous ai transmis une invitation sur votre mail lhillah@parisnan
 <img src="https://i.ibb.co/jyr1QGF/download.png">
 
 ### Features développées
-Comme indiqué pendant notre présentation, nous avons mal priorisé nos features métier. A ce stade, nos features sont en cours de développement et sont disponibles uniquement sur des branches (pas encore de pull request).
+Comme indiqué lors notre présentation, nous avons mal priorisé nos features métier.Nos features sont, actuellement, en cours de développement et sont disponibles uniquement sur des branches (pas encore de pull request).
  - Nous avons pour l'instant le Sign in / Sign up qui sont en cours de tests avant de pull request.
- - La home page côté front est prête et une pull request a été ouvert
+ - La home page côté front est prête et une pull request a été ouvert.
  - Le feed est en cours de développement
- - La map est en mode sandbox sur une branche
+ - La map est en mode sandbox sur une branche.
 
 Nous aurons des features à vous présenter pour notre prochain sprint, celui-ci a été notre sprint 0 où nous avons détecté les défauts de notre organisation et nous allons y remédier pour le prochain.
