@@ -112,6 +112,18 @@ npm install
 ```
 Le processus peut prendre plus au moins du temps en fonction de votre connexion internet. Une fois que ceci est terminé, exécutez cette commande :
 
+Il sera nécessaire de générer une clef API [Mapbox](https://account.mapbox.com/) pour pouvoir utiliser le système de cartographie.
+
+Une fois la clef générée, il faudra la renseigner dans le fichier ```sh environement.ts```
+
+```sh
+export const environment = {
+  production: false,
+  mapBoxKey: 'VOTRE CLEF'
+};
+```
+Une fois toutes les étapes terminées, vous pouvez éxécuter la commande suivante :
+
 ```sh
 ng serve
 ```
