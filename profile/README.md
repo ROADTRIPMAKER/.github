@@ -4,11 +4,14 @@ _Le meilleur choix, c'est forcément le votre!_
 ![Spring](https://img.shields.io/badge/Spring-2.5.5-brightgreen?logo=Spring)
 ![Angular](https://img.shields.io/badge/Angular-12.2.6-brightgreen?logo=Angular)
 ![Node.js](https://img.shields.io/badge/Node.js-14.17.6-brightgreen?logo=node.js)
-![MongoDB](https://img.shields.io/badge/MongoDB-4.4.9-brightgreen?logo=Mongodb)
+![Postgresql](https://img.shields.io/badge/Postgresql-14.0.1-brightgreen?logo=Postgresql)
 
 ![NPM](https://img.shields.io/badge/NPM-6.14.15-brightgreen?logo=npm)
 ![JVM](https://img.shields.io/badge/JVM-16.0.2-brightgreen?logo=Java)
 ![Gradle](https://img.shields.io/badge/Gradle-7.2-brightgreen?logo=Gradle)
+![Docker](https://img.shields.io/badge/Docker-20.10.9-brightgreen?logo=Docker)
+
+![Mapbox](https://img.shields.io/badge/MapBox-2.5.1-brightgreen?logo=Mapbox)
 
 ![Intellij](https://img.shields.io/badge/Intellij-Ultimate-brightgreen?logo=intellij-idea)
 
@@ -18,8 +21,35 @@ Avant de commencer, il est important d'installer les outils nécessaires au bon 
 - [Gradle](https://gradle.org/install/) Nous aurons besoin de Gradle pour faire fonctionner Spring
 - [Node](https://nodejs.org/en/) Nous aurons besoin de Node en version LTS pour faire fonctionner Angular
 - [Intellij](https://www.jetbrains.com/fr-fr/idea/) Nous utiliserons pour notre API ainsi que pour le FRONT d'intellij
+- [Docker](https://www.docker.com/) Nous utiliserons docker pour conteneuriser notre base de données - Postgresql
+
 
 Il existe une multitude de tutoriels sur internet pour vous aider dans l'installation des différents outils ci-dessus.
+
+### Docker 
+Nous allons commencer par récupérer l'image docker que nous utilisons pour notre projet. Pour cela, il faudra lancer cette commande ```sh docker pull tizianogh/roadtripmaker:latest ```
+
+Ensuite il faudra créer un répertoire où les informations nécessaire à l'image seront stockées : ```sh mkdir ${HOME}/postgres-data/```
+
+Cette commande créer un répertoire à la racine de votre utilisateur où vous êtes connecté.
+
+Ensuite, nous allons lancer l'image :
+```sh 
+docker run -d \
+	--name dev-postgres \
+	-e POSTGRES_PASSWORD=votre mot de passe de votre choix \
+	-v ${HOME}/postgres-data/:/var/lib/postgresql/data \
+        -p 5432:5432
+        tizianogh/roadtripmaker
+```
+
+Nous rentrons dans l'image que nous venons de créer : ```sh docker exec -it dev-postgres bash```
+
+Nous nous connectons avec le compte par défault de postgres : ```sh psql -h localhost -U postgres```
+
+Il faut maintenant créer une base de données : ```sh create database roadtripmaker```
+
+Pour finir, nous nous connectons à cette base : ```sh \c roadtripmaker```
 
 ## Premier lancement
 ### API
@@ -49,6 +79,23 @@ Si votre IDE ne compile pas automatiquement, éxecutez cette commande :
 cd API
 ./gradlew build
 ```
+Lors du pull depuis le repository, un fichier ```sh application.template.properties``` est présent dans l'arborescence.
+
+Nous avons besoin de le dupliquer en modifiant son nom. Renonmmez le en ```sh application.properties```
+
+Voici à quoi votre fichier doit ressembler :
+
+```sh
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+spring.datasource.url=jdbc:postgresql://localhost:5432/roadtripmaker
+spring.datasource.username=postgres
+spring.datasource.password=votre mot de passe
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.format_sql=true
+```
+Au niveau de la ligne password, veuillez renseigner le mot de passe que vous avez attribué lors de l'initialisation de l'image docker.
+
 Si tous les voyants sont au vert cela veut dire que nous y sommes presque ! 🔥
 Il ne reste plus qu'à cliquer sur le bouton run de votre IDE pour qu'il puisse lancer l'API. Tout comme le build, il est possible de faire cette étape via une commande :
 
