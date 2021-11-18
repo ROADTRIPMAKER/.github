@@ -27,9 +27,9 @@ Avant de commencer, il est important d'installer les outils nécessaires au bon 
 Il existe une multitude de tutoriels sur internet pour vous aider dans l'installation des différents outils ci-dessus.
 
 ### Docker 
-Nous allons commencer par récupérer l'image docker que nous utilisons pour notre projet. Pour cela, il faudra lancer cette commande ```sh docker pull tizianogh/roadtripmaker:latest ```
+Nous allons commencer par récupérer l'image docker que nous utilisons pour notre projet. Pour cela, il faudra lancer cette commande ```docker pull tizianogh/roadtripmaker:latest```
 
-Ensuite il faudra créer un répertoire où les informations nécessaire à l'image seront stockées : ```sh mkdir ${HOME}/postgres-data/```
+Ensuite il faudra créer un répertoire où les informations nécessaire à l'image seront stockées : ```mkdir ${HOME}/postgres-data/```
 
 Cette commande créer un répertoire à la racine de votre utilisateur où vous êtes connecté.
 
@@ -43,13 +43,13 @@ docker run -d \
         tizianogh/roadtripmaker
 ```
 
-Nous rentrons dans l'image que nous venons de créer : ```sh docker exec -it dev-postgres bash```
+Nous rentrons dans l'image que nous venons de créer : ```docker exec -it dev-postgres bash```
 
-Nous nous connectons avec le compte par défault de postgres : ```sh psql -h localhost -U postgres```
+Nous nous connectons avec le compte par défault de postgres : ```psql -h localhost -U postgres```
 
-Il faut maintenant créer une base de données : ```sh create database roadtripmaker```
+Il faut maintenant créer une base de données : ```create database roadtripmaker;```
 
-Pour finir, nous nous connectons à cette base : ```sh \c roadtripmaker```
+Pour finir, nous nous connectons à cette base : ```\c roadtripmaker```
 
 ## Premier lancement
 ### API
@@ -79,9 +79,9 @@ Si votre IDE ne compile pas automatiquement, éxecutez cette commande :
 cd API
 ./gradlew build
 ```
-Lors du pull depuis le repository, un fichier ```sh application.template.properties``` est présent dans l'arborescence.
+Lors du pull depuis le repository, un fichier ```application.template.properties``` est présent dans l'arborescence.
 
-Nous avons besoin de le dupliquer en modifiant son nom. Renonmmez le en ```sh application.properties```
+Nous avons besoin de le dupliquer en modifiant son nom. Renonmmez le en ```application.properties```
 
 Voici à quoi votre fichier doit ressembler :
 
@@ -99,9 +99,7 @@ Au niveau de la ligne password, veuillez renseigner le mot de passe que vous ave
 Si tous les voyants sont au vert cela veut dire que nous y sommes presque ! 🔥
 Il ne reste plus qu'à cliquer sur le bouton run de votre IDE pour qu'il puisse lancer l'API. Tout comme le build, il est possible de faire cette étape via une commande :
 
-```sh
-./gradlew bootRun
-```
+```./gradlew bootRun```
 
 ### FRONT
 Passons maintenant au __FRONT__. Exécutez les commandes suivantes :
@@ -114,7 +112,7 @@ Le processus peut prendre plus au moins du temps en fonction de votre connexion 
 
 Il sera nécessaire de générer une clef API [Mapbox](https://account.mapbox.com/) pour pouvoir utiliser le système de cartographie.
 
-Une fois la clef générée, il faudra la renseigner dans le fichier ```sh environement.ts```
+Une fois la clef générée, il faudra la renseigner dans le fichier ```environement.ts```
 
 ```sh
 export const environment = {
@@ -124,9 +122,7 @@ export const environment = {
 ```
 Une fois toutes les étapes terminées, vous pouvez éxécuter la commande suivante :
 
-```sh
-ng serve
-```
+```ng serve```
 
 Après un court instant, entrez ce lien dans votre navigateur favori : http://localhost:4200/
 
