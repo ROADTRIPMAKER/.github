@@ -35,12 +35,7 @@ Cette commande créer un répertoire à la racine de votre utilisateur où vous 
 
 Ensuite, nous allons lancer l'image :
 ```sh 
-docker run -d \
-	--name dev-postgres \
-	-e POSTGRES_PASSWORD=votre mot de passe de votre choix \
-	-v ${HOME}/postgres-data/:/var/lib/postgresql/data \
-        -p 5432:5432
-        tizianogh/roadtripmaker
+docker run -d --name dev-postgres -e POSTGRES_PASSWORD=votre mot de passe de votre choix -v ${HOME}/postgres-data/:/var/lib/postgresql/data -p 5432:5432 tizianogh/roadtripmaker
 ```
 
 Nous rentrons dans l'image que nous venons de créer : ```docker exec -it dev-postgres bash```
