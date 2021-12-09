@@ -42,9 +42,17 @@ Nous rentrons dans l'image que nous venons de créer : ```docker exec -it dev-po
 
 Nous nous connectons avec le compte par défault de postgres : ```psql -h localhost -U postgres```
 
-Il faut maintenant créer une base de données : ```create database roadtripmaker;```
+S'il s'agit de votre première connexion, il faudra créer une base de données : ```create database roadtripmaker;```
 
 Pour finir, nous nous connectons à cette base : ```\c roadtripmaker```
+
+Lorsque vous rallumez votre ordinateur, il sera important de relancer le container possédant l'image. 
+Pour cela, lancer la commande ```docker container ls -a```
+
+Sur votre affichage, copier votre containerID et lancez la commande suivante, ```docker container start [VOTRE_ID]``` .
+
+Ensuite reprenez les étapes à partir de la commande ``` docker exec``` .
+
 
 ## Premier lancement
 ### API
