@@ -91,13 +91,20 @@ Voici à quoi votre fichier doit ressembler :
 ```sh
 spring.jpa.hibernate.ddl-auto=create
 spring.jpa.show-sql=true
-spring.datasource.url=jdbc:postgresql://localhost:5432/roadtripmaker
-spring.datasource.username=postgres
-spring.datasource.password=votre mot de passe
+spring.datasource.url=jdbc:postgresql://[ADRESS]
+spring.datasource.username=[USERNAME]
+spring.datasource.password=[PASSWORD]
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.properties.hibernate.format_sql=true
+
+spring.servlet.multipart.max-file-size=2MB
+spring.servlet.multipart.max-request-size=2MB
+
+gmaps.api.key=[GOOGLE KEY]
 ```
+Au niveau de la ligne username, veuillez renseigner le nom d'utilisateur de votre base de données.
 Au niveau de la ligne password, veuillez renseigner le mot de passe que vous avez attribué lors de l'initialisation de l'image docker.
+Pour la ligne gmaps.api.key, il faudra générer un token API de google afin de profiter des services de géocoding de l'application.
 
 Si tous les voyants sont au vert cela veut dire que nous y sommes presque ! 🔥
 Il ne reste plus qu'à cliquer sur le bouton run de votre IDE pour qu'il puisse lancer l'API. Tout comme le build, il est possible de faire cette étape via une commande :
